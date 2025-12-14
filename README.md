@@ -1,3 +1,3 @@
-# Prac-1 Typescript
+# Prac-2 Typescript
 
-перший проект з Typescript
+другий проект з Typescript
