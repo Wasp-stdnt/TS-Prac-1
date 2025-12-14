@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>TypeScript Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="header">
+    <div class="container header__inner">
+        <h1 class="logo">TS Landing</h1>
+        <nav class="nav">
+            <a href="#hero" class="nav__link">Головна</a>
+            <a href="#posts" class="nav__link">Пости</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="hero" class="hero">
+        <div class="container hero__inner">
+            <div>
+                <h2 class="hero__title">Практична робота з TypeScript</h2>
+                <p class="hero__subtitle">
+                    Демо-сторінка з модальним вікном, анімаціями та завантаженням даних з API.
+                </p>
+                <div class="hero__actions">
+                    <button class="btn" data-open-modal>Відкрити модальне вікно</button>
+                    <button class="btn btn--outline" id="load-posts">Завантажити пости</button>
+                </div>
+            </div>
+            <div class="hero__box">
+                <p class="hero__tag">TypeScript • Fetch • Events</p>
+                <p class="hero__text">
+                    Код інтерактивності написаний на TypeScript і скомпільований у JavaScript.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="posts">
+        <div class="container">
+            <h2 class="section-title">Останні пости (JSONPlaceholder)</h2>
+            <ul class="posts__list" id="posts">
+                <!-- Сюди TS буде додавати елементи -->
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- Модальне вікно -->
+<div class="modal" id="modal">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content">
+        <button class="modal__close" data-close-modal>&times;</button>
+        <h3 class="modal__title">Модальне вікно</h3>
+        <p class="modal__text">
+            Це модальне вікно відкривається по кліку на кнопку та закривається по кліку на фон,
+            хрестик або клавішу Escape.
+        </p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="footer__text">Практична 2 • TypeScript & GitHub Pages</p>
+    </div>
+</footer>
+
+<!-- Підключаємо СКОМПІЛЬОВАНИЙ JS (з dist) -->
+<script src="./dist/main.js" defer></script>
+</body>
+</html>
